@@ -5,7 +5,7 @@ plugins {
     `maven-publish`
 
     // Optional: enable only when the Shadow plugin is applied; uncomment under the SHADOW tag.
-    //alias(libs.plugins.shadow)
+    alias(libs.plugins.shadow)
 }
 
 group = providers.gradleProperty("group").get()
@@ -64,12 +64,12 @@ tasks {
     }
 
     // Optional Shadow configuration (SHADOW): enable only when the Shadow plugin is applied to avoid plugin resolution failures.
-    //withType<com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar> {
-    //    archiveFileName = "${rootProject.name}-${rootProject.version}.jar"
-    //    mergeServiceFiles()
-    //    minimize()
-    //}
-    //
+    withType<com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar> {
+        archiveFileName = "${rootProject.name}-${rootProject.version}.jar"
+        mergeServiceFiles()
+        minimize()
+    }
+
     register("projectInfo") {
     group = "help"
     description = "Wypisuje podstawowe informacje o projekcie"

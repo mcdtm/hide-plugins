@@ -22,4 +22,4 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "plugin-template"
+rootProject.name = "hide-plugins"

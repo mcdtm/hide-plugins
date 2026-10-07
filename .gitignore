@@ -6,3 +6,10 @@ build
 
 # Ignore Kotlin plugin data
 .kotlin
+
+#
+.local_libraries/
+.notes/
+
+#
+.idea/

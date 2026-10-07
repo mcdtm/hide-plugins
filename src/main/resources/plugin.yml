@@ -1,6 +1,7 @@
-name: 'YourPluginName'
+name: 'HidePlugins'
 version: '${version}'
-main: 'me.kvd.plugin.YourPluginClassName'
+main: 'me.kvd.hp.HidePluginsPlugin'
+load: 'STARTUP'
 authors: ['kvdpxne', 'mcdtm team']
 description: '${description}'
-website: 'https://github.com/mcdtm/'
+website: 'https://github.com/mcdtm/hide-plugins/'
