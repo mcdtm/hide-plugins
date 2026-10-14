@@ -1,7 +1,32 @@
 name: 'HidePlugins'
 version: '${version}'
 main: 'me.kvd.hp.HidePluginsPlugin'
-load: 'STARTUP'
+load: 'POSTWORLD'
 authors: ['kvdpxne', 'mcdtm team']
 description: '${description}'
 website: 'https://github.com/mcdtm/hide-plugins/'
+softdepend: []
+
+commands:
+  hideplugins:
+    description: HidePlugins administration command.
+    usage: /hideplugins <reload|status|spoof>
+    aliases: [hp]
+    permission: hideplugins.admin
+
+permissions:
+  hideplugins.bypass:
+    description: Grants full bypass of the plugin filter.
+    default: op
+  hideplugins.bypass.plugins:
+    description: Bypass for /plugins, /pl, /ver, /version, /about, /icanhasbukkit.
+    default: false
+  hideplugins.bypass.help:
+    description: Bypass for /help and /?.
+    default: false
+  hideplugins.admin:
+    description: Grants access to /hideplugins.
+    default: op
+  hideplugins.notify:
+    description: Receive notifications when players probe hidden commands.
+    default: op
